@@ -1,21 +1,14 @@
-export const makeChange = (purchaseAmount, tenderedAmount) => {
+export const getAllQuests = () => {
     return {
-        type: 'GET_QUEST_LIST',
-        purchaseAmount: Number(purchaseAmount),
-        tenderedAmount: Number(tenderedAmount)
+        type: 'GET_ALL_QUESTS'
     }
 }
 
-export const readFile = (file) => {
+export const selectQuest = (questId) => {
     return {
-        type: 'READ_FILE',
-        textFile: file
+        type: 'SELECT_QUEST',
+        id: questId
     }
 }
 
-export const makeBulkChange = () => {
-    return {
-        type: 'MAKE_BULK_CHANGE'
-    }
-}
 
