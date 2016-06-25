@@ -1,19 +1,21 @@
-import {connect} from "react-redux";
-import {makeChange} from "../actions";
-import CashRegister from "../components/CashRegister";
+import { connect } from "react-redux";
+import { selectQuest } from "../actions";
+import QuestList from "../components/QuestList";
 
 const mapStateToProps = (state) => {
-    return []
+    return {
+        quests: state
+    }
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onMakeChange: (purchaseAmount, tenderedAmount) => {
-            dispatch(makeChange(purchaseAmount, tenderedAmount))
+        onSelectQuest: (questId) => {
+            dispatch(selectQuest(questId))
         }
     }
 }
 
-const CashRegisterContainer = connect(mapStateToProps, mapDispatchToProps)(CashRegister);
+const VisibleQuests = connect(mapStateToProps, mapDispatchToProps)(QuestList);
 
-export default CashRegisterContainer
+export default VisibleQuests
