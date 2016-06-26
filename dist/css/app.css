@@ -8,8 +8,7 @@ body {
 }
 
 .quest-list {
-    margin-top: 300px;
-    padding: 50px;
+    margin-top: 330px;
     font-family: Helvetica, sans;
 }
 
@@ -63,4 +62,8 @@ body {
     padding-left: 10px;
     border: 1px solid #aaa;
     border-radius: 3px;
+}
+
+.quest h1 {
+    text-align: center;
 }

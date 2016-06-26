@@ -9,7 +9,7 @@ const quests = (state = questData, action) => {
             newState = Object.assign({}, state, {questFilter: action.filter});
             break;
         case 'SELECT_QUEST':
-            console.log("You selected: " + action.id);
+            newState = Object.assign({}, state, {selectedQuestId: action.id});
             break;
     }
     return newState;

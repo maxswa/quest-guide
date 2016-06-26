@@ -15,7 +15,6 @@ const mapDispatchToProps = (dispatch) => {
             dispatch(filterQuestList(event.target.value))
         },
         onSelectQuest: (id) => {
-            console.log(id);
             dispatch(selectQuest(id));
         }
     }

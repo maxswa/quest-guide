@@ -1,17 +1,21 @@
 export const questData = {
     questFilter: '',
+    selectedQuestId: undefined,
     quests: [
         {
             id: 1,
-            name: "Animal Magnetism"
+            name: "Animal Magnetism",
+            description: "Draynor Manor has a new resident and, adventurers rejoice, she is a damsel in distress. Far from being Sleeping Beauty, she finds the Manor's beds not to her liking and is suffering from insomniac nights. If you fancy yourself able to aid Ava in her search for a good night's sleep, who knows what the budding scientist will produce as a reward?"
         },
         {
             id: 2,
-            name: "Another Slice of H.A.M"
+            name: "Another Slice of H.A.M",
+            description: "The dwarves are building a new underground rail link between their city of Keldagrim and the cave goblins' Dorgesh-Kaan, but work is being held up by the discovery of ancient goblin artifacts, and they need the help of a qualified archaeologist. Helping them out should be simple enough - unless you stumble upon another H.A.M. plot against the city."
         },
         {
             id: 3,
-            name: "Between a Rock..."
+            name: "Between a Rock...",
+            description: "Hidden away from the fearsome trolls and the roaming Fremennik, the dwarves delve deep beneath the mountains in search for the ore they need to support their home of Keldagrim. One dwarf in particular, however, has for years been trying to crack open a rock that seems to be impervious to any material that he's tried on it. Convinced that solving the riddle of the rock will lead him to unimaginable wealth, he has spent the later part of his life on just this lump of stone. Help him out, but take care you don't end up in a tight spot!"
         },
         {
             id: 4,
