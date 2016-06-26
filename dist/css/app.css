@@ -1,18 +1,44 @@
 body {
-    /*background: #eee url('../assets/images/CafePatio_StockImage.jpg') no-repeat fixed center;*/
+    background-image: url('../assets/images/Old_School_Runescape_Logo.png');
+    background-repeat: no-repeat;
+    background-position: 50% -50px;
 }
 
 .container {
 }
 
 .quest-list {
+    margin-top: 300px;
     padding: 50px;
     font-family: Helvetica, sans;
+}
+
+#quest-summaries {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
     background-color: #eee;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#quest-summaries-scrollable {
+    max-height: 500px;
+    overflow-y: auto;
 }
 
 .quest-summary {
-    margin-bottom: 20px;
+    padding: 4px 8px;
+    background-color: #ffe;
+    border-bottom: 1px solid #ee8
+}
+
+.quest-summary:hover {
+    background-color: #cc8;
+    cursor: pointer;
+    padding: 3px 7px;
+    border: 1px dashed #444;
+    border-radius: 5px;
 }
 
 .quest-summary .quest-name {
@@ -25,8 +51,9 @@ body {
 
 #quest-filter {
     padding: 20px;
-    background-color: #d8d8d8;
-    border-radius: 5px;
+    background-color: #eee;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 #quest-filter-input {

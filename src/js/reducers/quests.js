@@ -1,19 +1,5 @@
 import { questData } from "../questData";
 
-// export const questData = {
-//     questFilter: '',
-//     quests: [
-//         {
-//             id: 1,
-//             name: "Animal Magnetism"
-//         },
-//         {
-//             id: 2,
-//             name: "Another Slice of H.A.M"
-//         }
-//             ... etc ...
-// }
-
 const quests = (state = questData, action) => {
     let newState = state;
     switch (action.type) {
