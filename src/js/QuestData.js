@@ -1,4 +1,8 @@
 export const questData = {
+    attack: {
+        level: 70,
+        xp: 12345
+    },
     questFilter: '',
     selectedQuestId: undefined,
     quests: [

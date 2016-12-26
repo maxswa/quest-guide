@@ -11,6 +11,9 @@ const quests = (state = questData, action) => {
         case 'SELECT_QUEST':
             newState = Object.assign({}, state, {selectedQuestId: action.id});
             break;
+        case 'RECEIVE_PLAYER_STATS':
+            newState = Object.assign({}, state, {attack: action.stats});
+            break;
     }
     return newState;
 }
