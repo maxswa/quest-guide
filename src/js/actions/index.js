@@ -45,9 +45,126 @@ export const requestPlayerStats = (rsn) => (
                 (response) => {
                     let foo = Papa.parse(response.text)
                     dispatch(receivePlayerStats({
-                        rank: foo.data[1][0],
-                        level: foo.data[1][1],
-                        xp: foo.data[1][2]
+                        total: {
+                            rank: foo.data[0][0],
+                            level: foo.data[0][1],
+                            xp: foo.data[0][2]
+                        },
+                        attack: {
+                            rank: foo.data[1][0],
+                            level: foo.data[1][1],
+                            xp: foo.data[1][2]
+                        },
+                        defence: {
+                            rank: foo.data[2][0],
+                            level: foo.data[2][1],
+                            xp: foo.data[2][2]
+                        },
+                        strength: {
+                            rank: foo.data[3][0],
+                            level: foo.data[3][1],
+                            xp: foo.data[3][2]
+                        },
+                        hitpoints: {
+                            rank: foo.data[4][0],
+                            level: foo.data[4][1],
+                            xp: foo.data[4][2]
+                        },
+                        ranged: {
+                            rank: foo.data[5][0],
+                            level: foo.data[5][1],
+                            xp: foo.data[5][2]
+                        },
+                        prayer: {
+                            rank: foo.data[6][0],
+                            level: foo.data[6][1],
+                            xp: foo.data[6][2]
+                        },
+                        magic: {
+                            rank: foo.data[7][0],
+                            level: foo.data[7][1],
+                            xp: foo.data[7][2]
+                        },
+                        cooking: {
+                            rank: foo.data[8][0],
+                            level: foo.data[8][1],
+                            xp: foo.data[8][2]
+                        },
+                        woodcutting: {
+                            rank: foo.data[9][0],
+                            level: foo.data[9][1],
+                            xp: foo.data[9][2]
+                        },
+                        fletching: {
+                            rank: foo.data[10][0],
+                            level: foo.data[10][1],
+                            xp: foo.data[10][2]
+                        },
+                        fishing: {
+                            rank: foo.data[11][0],
+                            level: foo.data[11][1],
+                            xp: foo.data[11][2]
+                        },
+                        firemaking: {
+                            rank: foo.data[12][0],
+                            level: foo.data[12][1],
+                            xp: foo.data[12][2]
+                        },
+                        crafting: {
+                            rank: foo.data[13][0],
+                            level: foo.data[13][1],
+                            xp: foo.data[13][2]
+                        },
+                        smithing: {
+                            rank: foo.data[14][0],
+                            level: foo.data[14][1],
+                            xp: foo.data[14][2]
+                        },
+                        mining: {
+                            rank: foo.data[15][0],
+                            level: foo.data[15][1],
+                            xp: foo.data[15][2]
+                        },
+                        herblore: {
+                            rank: foo.data[16][0],
+                            level: foo.data[16][1],
+                            xp: foo.data[16][2]
+                        },
+                        agility: {
+                            rank: foo.data[17][0],
+                            level: foo.data[17][1],
+                            xp: foo.data[17][2]
+                        },
+                        thieving: {
+                            rank: foo.data[18][0],
+                            level: foo.data[18][1],
+                            xp: foo.data[18][2]
+                        },
+                        slayer: {
+                            rank: foo.data[19][0],
+                            level: foo.data[19][1],
+                            xp: foo.data[19][2]
+                        },
+                        farming: {
+                            rank: foo.data[20][0],
+                            level: foo.data[20][1],
+                            xp: foo.data[20][2]
+                        },
+                        runecraft: {
+                            rank: foo.data[21][0],
+                            level: foo.data[21][1],
+                            xp: foo.data[21][2]
+                        },
+                        hunter: {
+                            rank: foo.data[22][0],
+                            level: foo.data[22][1],
+                            xp: foo.data[22][2]
+                        },
+                        construction: {
+                            rank: foo.data[23][0],
+                            level: foo.data[23][1],
+                            xp: foo.data[23][2]
+                        }
                     }))
                 },
                 (reason) => {

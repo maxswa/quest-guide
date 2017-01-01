@@ -1,8 +1,132 @@
+@font-face {
+    font-family: theBoldFont;
+    src: url('../assets/fonts/theboldfont.ttf');
+}
+
 body {
-    background-image: url('../assets/images/Old_School_Runescape_Logo.png');
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: theBoldFont;
+    font-size: 70pt;
+}
+
+ul {
+    margin-top: 0;
+    padding-left: 5px;
+    text-align: left;
+    list-style: none;
+    -webkit-animation-name: change;
+    -webkit-animation-duration: 16s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: change;
+    animation-duration: 16s;
+    animation-iteration-count: infinite;
+}
+
+ul li {
+    line-height: 40px;
+    margin: 0;
+}
+
+@-webkit-keyframes change {
+    0%, 17% {
+        transform: translateY(-82%);
+    }
+    22%, 42% {
+        transform: translateY(-61%);
+    }
+    47%, 67% {
+        transform: translateY(-40%);
+    }
+    72%, 92% {
+        transform: translateY(-19%);
+    }
+    97%, 100% {
+        transform: translateY(+0.9%);
+    }
+}
+
+@keyframes change {
+    0%, 17% {
+        transform: translateY(-82%);
+    }
+    22%, 42% {
+        transform: translateY(-61%);
+    }
+    47%, 67% {
+        transform: translateY(-40%);
+    }
+    72%, 92% {
+        transform: translateY(-19%);
+    }
+    97%, 100% {
+        transform: translateY(+0.7%);
+    }
+}
+
+.titleQuest {
+    color: #329ABC;
+}
+
+.titleClue {
+    color: #A48D70;
+}
+
+.titleDiary {
+    color: #56bc6f;
+}
+
+.titleSkill {
+    color: #bc5a48;
+}
+
+.titleGuide {
+    color: #2a2a2a;
+    transform: translateY(-30%);
+}
+
+#titleBot {
+    float: right;
+    width: 50%;
+    height: 50%;
+    padding-left: 5px;
+    /*border: 3px solid green;*/
+}
+
+#titleTop {
+    float: right;
+    width: 50%;
+    height: 50%;
+    overflow: hidden;
+    /*border: 3px solid green;*/
+}
+
+#logo {
+    padding: 20px 0;
+    float: left;
+    width: 50%;
+    height: 100%;
+    padding-right: 10px;
+    /*border: 3px solid green;*/
+}
+
+#questGuide {
+    background-image: url('../assets/images/OSRS.svg');
+    background-size: 400px 435px;
     background-repeat: no-repeat;
     background-position: 50% -50px;
 }
+
+#header {
+    margin: auto;
+    width: 600px;
+    height: 250px;
+    /*border: 3px solid green;*/
+}
+
 
 .container {
 }

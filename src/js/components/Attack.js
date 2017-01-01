@@ -12,7 +12,7 @@ const Attack = ({attack, onPlayerNameChange}) => {
                 />
                 <div className="attack row">
                     <div id="attack-level" className="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">
-                        <h1>{attack.rank} {attack.level} {attack.xp}</h1>
+                        <h1>{attack.agility.rank} {attack.agility.level} {attack.agility.xp}</h1>
                     </div>
                 </div>
             </div>
