@@ -164,7 +164,8 @@ export const requestPlayerStats = (rsn) => (
                             rank: foo.data[23][0],
                             level: foo.data[23][1],
                             xp: foo.data[23][2]
-                        }
+                        },
+                        rsn: rsn
                     }))
                 },
                 (reason) => {

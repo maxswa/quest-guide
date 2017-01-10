@@ -1,10 +1,29 @@
 export const questData = {
-    attack: {
-        agility: {
-            rank: 1,
-            level: 70,
-            xp: 12345
-        }
+    stats: {
+        agility: {},
+        attack: {},
+        construction: {},
+        cooking: {},
+        crafting: {},
+        defence: {},
+        farming: {},
+        firemaking: {},
+        fishing: {},
+        fletching: {},
+        herblore: {},
+        hitpoints: {},
+        hunter: {},
+        magic: {},
+        mining: {},
+        prayer: {},
+        ranged: {},
+        runecraft: {},
+        slayer: {},
+        smithing: {},
+        strength: {},
+        thieving: {},
+        woodcutting: {},
+        total: {}
     },
     questFilter: '',
     selectedQuestId: undefined,

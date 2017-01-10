@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link href="css/app.css" rel="stylesheet">
+    <link rel="icon" href="./assets/images/favicon.ico"/>
     <title>OSRS Guide</title>
 </head>
 <body>
@@ -16,15 +17,49 @@
     <div id="titleTop">
         <ul>
             <li><h1 class="titleQuest">Quest</h1></li>
+            <li><h1 class="titleClue">Clue</h1></li>
+            <li><h1 class="titleBoss">Boss</h1></li>
             <li><h1 class="titleSkill">Skill</h1></li>
             <li><h1 class="titleDiary">Diary</h1></li>
-            <li><h1 class="titleClue">Clue</h1></li>
             <li><h1 class="titleQuest">Quest</h1></li>
         </ul>
     </div>
     <div id="titleBot">
         <h1 class="titleGuide">Guide</h1>
     </div>
+    </div>
+<div id="tiles">
+    <!--No whitespace after a tag to prevent it from being rendered-->
+    <a href="quest.html">
+        <div class="tile" id="rectQuest">
+            <img src="./assets/images/Quest.svg" alt="Quest">
+            <h2 class="titleQuest">Quest</h2>
+        </div>
+    </a>
+    <a href="diary.html">
+        <div class="tile" id="rectDiary">
+            <img src="./assets/images/Diary.svg" alt="Diary">
+            <h2 class="titleDiary">Diary</h2>
+        </div>
+    </a>
+    <a href="skill.html">
+        <div class="tile" id="rectSkill">
+            <img src="./assets/images/Skill.svg" alt="Skill">
+            <h2 class="titleSkill">Skill</h2>
+        </div>
+    </a>
+    <a href="boss.html">
+        <div class="tile" id="rectBoss">
+            <img src="./assets/images/Boss.svg" alt="Boss">
+            <h2 class="titleBoss">Boss</h2>
+        </div>
+    </a>
+    <a href="clue.html">
+        <div class="tile" id="rectClue">
+            <img src="./assets/images/Clue.svg" alt="Clue">
+            <h2 class="titleClue">Clue</h2>
+        </div>
+    </a>
 </div>
 </body>
 </html>

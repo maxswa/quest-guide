@@ -1,12 +1,10 @@
 import React from "react";
-import VisibleQuests from "../containers/VisibleQuests";
-import QuestDetail from "../containers/QuestDetail";
-import AttackTest from "../containers/AttackTest";
+import AttackTest from "../containers/GetStats";
 
 const App = () => (
     <div>
-        <VisibleQuests />
-        <QuestDetail />
+        {/*<VisibleQuests />*/}
+        {/*<QuestDetail />*/}
         <AttackTest />
     </div>
 )

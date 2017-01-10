@@ -1,4 +1,4 @@
-import { questData } from "../questData";
+import {questData} from "../questData";
 
 const quests = (state = questData, action) => {
     let newState = state;
@@ -12,7 +12,7 @@ const quests = (state = questData, action) => {
             newState = Object.assign({}, state, {selectedQuestId: action.id});
             break;
         case 'RECEIVE_PLAYER_STATS':
-            newState = Object.assign({}, state, {attack: action.stats});
+            newState = Object.assign({}, state, {stats: action.stats});
             break;
     }
     return newState;

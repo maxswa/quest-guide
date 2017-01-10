@@ -6,6 +6,7 @@
 body {
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
 h1 {
@@ -13,16 +14,97 @@ h1 {
     font-size: 70pt;
 }
 
+h2 {
+    font-family: theBoldFont;
+    font-size: 35pt;
+}
+
+h3 {
+    font-family: theBoldFont;
+    font-size: 35pt;
+    float: right;
+    line-height: 1.15;
+    padding-right: 10px;
+    margin: 0;
+}
+
+.icon {
+    height: 100%;
+}
+
+#skillGrid {
+    padding-top: 100px;
+    margin: auto;
+    width: 500px;
+    height: 700px;
+}
+
+.skillTile {
+    padding: 10px;
+    width: 33.333333%;
+    height: 12.5%;
+    float: left;
+    transition: box-shadow 0.5s ease;
+}
+
+.totalTile {
+    padding: 15px;
+    width: 33.333333%;
+    height: 12.5%;
+    float: left;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.skillTile:hover {
+    box-shadow: 0px 0px 5px #262626;
+}
+
+#rectQuest:hover {
+    box-shadow: 0px 0px 20px #657AFE;
+}
+
+#rectClue:hover {
+    box-shadow: 0px 0px 20px #A48D70;
+}
+
+#rectDiary:hover {
+    box-shadow: 0px 0px 20px #56bc6f;
+}
+
+#rectSkill:hover {
+    box-shadow: 0px 0px 20px #bc5a48;
+}
+
+#rectBoss:hover {
+    box-shadow: 0px 0px 20px #eddb53;
+}
+
+.tile {
+    display: inline-block;
+    width: 175px;
+    height: 250px;
+    padding: 15px;
+    margin: 10px;
+    transition: box-shadow 0.5s ease;
+}
+
+#tiles {
+    margin: auto;
+    margin-top: 50px;
+    width: 80%;
+    text-align: center;
+}
+
 ul {
     margin-top: 0;
-    padding-left: 5px;
+    padding-left: 0;
     text-align: left;
     list-style: none;
     -webkit-animation-name: change;
-    -webkit-animation-duration: 16s;
+    -webkit-animation-duration: 12s;
     -webkit-animation-iteration-count: infinite;
     animation-name: change;
-    animation-duration: 16s;
+    animation-duration: 12s;
     animation-iteration-count: infinite;
 }
 
@@ -50,25 +132,28 @@ ul li {
 }
 
 @keyframes change {
-    0%, 17% {
-        transform: translateY(-82%);
+    0%, 16% {
+        transform: translateY(-85%);
     }
-    22%, 42% {
-        transform: translateY(-61%);
+    20%, 36% {
+        transform: translateY(-68%);
     }
-    47%, 67% {
-        transform: translateY(-40%);
+    40%, 56% {
+        transform: translateY(-51%);
     }
-    72%, 92% {
-        transform: translateY(-19%);
+    60%, 76% {
+        transform: translateY(-34%);
     }
-    97%, 100% {
+    80%, 96% {
+        transform: translateY(-17%);
+    }
+    100% {
         transform: translateY(+0.7%);
     }
 }
 
 .titleQuest {
-    color: #329ABC;
+    color: #657AFE;
 }
 
 .titleClue {
@@ -83,20 +168,25 @@ ul li {
     color: #bc5a48;
 }
 
+.titleBoss {
+    color: #eddb53;
+}
+
 .titleGuide {
     color: #2a2a2a;
     transform: translateY(-30%);
 }
 
 #titleBot {
+    padding-left: 2px;
     float: right;
     width: 50%;
     height: 50%;
-    padding-left: 5px;
     /*border: 3px solid green;*/
 }
 
 #titleTop {
+    padding-left: 2px;
     float: right;
     width: 50%;
     height: 50%;
@@ -114,20 +204,47 @@ ul li {
 }
 
 #questGuide {
-    background-image: url('../assets/images/OSRS.svg');
-    background-size: 400px 435px;
-    background-repeat: no-repeat;
-    background-position: 50% -50px;
 }
 
 #header {
     margin: auto;
+    margin-top: 50px;
     width: 600px;
     height: 250px;
     /*border: 3px solid green;*/
 }
 
+#headerSmall {
+    float: left;
+    margin-left: 20px;
+    width: 300px;
+    height: 130px;
+}
 
+.headerBar {
+    width: 100%;
+    height: 150px;
+}
+
+#headerSkill {
+    box-shadow: 0px 0px 20px #bc5a48;
+}
+
+#headerQuest {
+    box-shadow: 0px 0px 20px #657AFE;
+}
+
+#headerClue {
+    box-shadow: 0px 0px 20px #A48D70;
+}
+
+#headerDiary {
+    box-shadow: 0px 0px 20px #56bc6f;
+}
+
+#headerBoss {
+    box-shadow: 0px 0px 20px #eddb53;
+}
 .container {
 }
 
