@@ -1,6 +1,7 @@
 import React from "react";
+import {requestPlayerStats} from "../actions";
 
-const Stats = ({stats, onPlayerNameChange}) => {
+const Stats = ({stats, onPlayerNameChange, onPlayerNameSubmit}) => {
 
     const apiOrder = {
         total: 0,
@@ -55,13 +56,20 @@ const Stats = ({stats, onPlayerNameChange}) => {
         "total"
     ];
     if (stats) {
+        let input
         return (
             <div id="attack-filter" className="col-md-10 col-md-offset-1 col-xs-12">
-                <input id="attack-filter-input"
-                       type="text"
-                       placeholder="Enter a player name"
-                       onChange={onPlayerNameChange}
-                />
+                <form onSubmit={e => {
+                    e.preventDefault()
+                    if (!input.value.trim()) {
+                        return
+                    }
+                    onPlayerNameSubmit(input.value)
+                    }}>
+                    <input ref={(node) => {
+                        input = node
+                    }}/>
+                </form>
                 <h1>{stats.rsn}</h1>
                 <div id="skillGrid">
                     {

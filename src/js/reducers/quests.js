@@ -14,6 +14,9 @@ const quests = (state = questData, action) => {
         case 'RECEIVE_PLAYER_STATS':
             newState = Object.assign({}, state, {stats: action.stats});
             break;
+        case 'CHANGE_NAME':
+            newState = Object.assign({}, state, {rsn: action.rsn});
+            break;
     }
     return newState;
 }

@@ -1,6 +1,6 @@
 import {connect} from "react-redux";
 import Stats from "../components/Stats";
-import {requestPlayerStats} from "../actions";
+import * as actions from "../actions";
 
 const mapStateToProps = (state) => {
     return {
@@ -11,10 +11,18 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         onPlayerNameChange: (event) => {
-            dispatch(requestPlayerStats(event.target.value))
+            dispatch(actions.changeName(event.target.value))
+            // dispatch(requestPlayerStats(event.target.value))
+        },
+        onPlayerNameSubmit: (evt) => {
+            dispatch(actions.requestPlayerStats(evt))
         }
     }
 }
+
+// const onNameChange = (event) => {
+//     changeName(event.target.value)
+// }
 
 const GetStats = connect(mapStateToProps, mapDispatchToProps)(Stats);
 

@@ -1,26 +1,41 @@
-var path = require("path");
+const path = require('path');
+const webpack = require('webpack');
 module.exports = {
+    context: path.resolve(__dirname, './src'),
     entry: {
-        app: ['./src/js/index.js']
+        app: './js/index.js'
     },
     output: {
         path: path.resolve(__dirname, './dist'),
-        filename: 'bundle.js',
+        filename: '[name].bundle.js',
         publicPath: '/'
     },
     devServer: {
-        inline: true,
-        contentBase: './dist',
-        port: 8090
+        contentBase: path.resolve(__dirname, './src')
     },
-    devTool: "source-map",
+    devtool: 'cheap-module-source-map',
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.js$/,
-                loaders: ['babel'],
-                exclude: /node_modules/
+                exclude: /node_modules/,
+                use: [
+                    {
+                        loader: 'babel-loader',
+                        options: {
+                            presets: ['react', 'es2015'],
+                            plugins: ['transform-object-rest-spread']
+                        }
+                    }
+                ]
             }
         ]
-    }
+    },
+    plugins: [
+        new webpack.DefinePlugin({
+            'process.env': {
+                'NODE_ENV': JSON.stringify('development')
+            }
+        })
+    ]
 }

@@ -1,5 +1,6 @@
 import request from "superagent";
 import Papa from "papaparse";
+import rsparse from "../lib/rsparse";
 
 export const getAllQuests = () => {
     return {
@@ -28,6 +29,13 @@ export const receivePlayerStats = (stats) => {
     }
 }
 
+export const changeName = (rsn) => {
+    return {
+        type: 'CHANGE_NAME',
+        rsn: rsn
+    }
+}
+
 export const requestPlayerStats = (rsn) => (
 
     // Thunk middleware knows how to handle functions.
@@ -44,6 +52,7 @@ export const requestPlayerStats = (rsn) => (
             .then(
                 (response) => {
                     let foo = Papa.parse(response.text)
+                    rsparse(0, response.text)
                     dispatch(receivePlayerStats({
                         total: {
                             rank: foo.data[0][0],

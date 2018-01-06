@@ -1,4 +1,5 @@
 export const questData = {
+    rsn: "",
     stats: {
         agility: {},
         attack: {},
